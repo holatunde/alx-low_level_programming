@@ -1,8 +1,9 @@
-#include <stdio.h>
+#include <studio.h>
 /**
- * main - Entry point
- * Description: prints "programming is like building a multilingual puzzle"
+ * main - print the string in the put function
  *
+ * Description: using the main function
+ * this program prints "Programming is like building a multilingual puzzle
  * Return: Always 0 (sucess)
  */
 int main(void)
