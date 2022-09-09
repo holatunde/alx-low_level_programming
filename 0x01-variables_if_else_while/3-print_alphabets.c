@@ -12,22 +12,10 @@ int main(void)
 {
 	int i, j;
 
-	i = 97;
-	j = 65;
-
-	while (i < 123)
+	while (i = 97, j = 65, i < 123, j < 91, i++, j++)
 	{
-		putchar(i);
-		i++;
+		putchar(i, j);
 	}
-
-	while (j < 91)
-       { 
-	       putchar(j);
-	       j++;
-       }
-      
-       putchar(10);
-
-      return (0);
+	putchar(10);
+	return (0);
 }
