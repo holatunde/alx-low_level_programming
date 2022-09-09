@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	int i = 97;
 
-	while (i < 127)
+	char ch;
+
+	for (ch = 'a' ; ch = 'z' ; ch++)
 	{
-		putchar(i);
-		i++;
+		putchar(ch)
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
 }

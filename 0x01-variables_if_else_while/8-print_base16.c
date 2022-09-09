@@ -10,16 +10,16 @@
 
 int main(void)
 {
-	int i = 0;
+	char c;
 
-	while (i < 10)
+	for (c = '0'; c <= '9'; c++)
 	{
-		if (i < 10)
-			putchar(i + '0');
-		else if (i > 41)
-			putchar(i - 10 + 'A');
-		i++;
+		putchar(c);
 	}
-	putchar(10);
+	for (c = 'a'; c <= 'f'; c++)
+	{
+		putchar(c);
+	}
+	putchar('\n');
 	return (0);
 }
