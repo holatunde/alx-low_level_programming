@@ -10,23 +10,25 @@
 
 int main(void)
 {
-	int i, j;
+	int i = 0;
+	int j;
+	int k;
 
-	for (i = 0; i <= 9; i++)
+	while (i <= 99)
 	{
-		for (j = 1; j <= 9; j++)
+		j = (i / 10 + '0');
+		k = (i % 10 + '0');
+		if (j < k)
 		{
-			if (j > 1)
+			putchar(j);
+			putchar(k);
+			if (i != 89)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i != 8)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
