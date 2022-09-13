@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char putchar[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	char putchar[8] = "_putchar";
 	unsigned int n;
 
 	for (n = 0; n < sizeof(putchar); n++)
