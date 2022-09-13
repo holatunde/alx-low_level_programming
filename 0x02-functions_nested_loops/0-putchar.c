@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char text[8] = "_putchar";
+	char text[8] = "putchar";
 	int n = 0;
 
 	for (n = 0; n < 9; n++)
