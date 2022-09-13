@@ -8,12 +8,13 @@
 
 int main(void)
 {
-	char putchar[8] = "_putchar";
-	unsigned int n;
+	char text[8] = "_putchar";
+	int n = 0;
 
-	for (n = 0; n < sizeof(putchar); n++)
+	for (n = 0; n < 9; n++)
 	{
-		_putchar(putchar[8])
+		_putchar(putchar[n])
 	}
 	_putchar('\n');
 	return (0);
+}
