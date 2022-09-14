@@ -13,7 +13,7 @@ int main(void)
 
 	printf("%d, ", x);
 	printf("%d", y);
-	for (i = 1; i < 97; i++)
+	for (i = 1; i < 98; i++)
 	{
 		s = x + y;
 		putchar(',');
