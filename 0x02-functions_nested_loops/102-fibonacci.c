@@ -11,16 +11,16 @@ int main(void)
 	int i;
 	long int x = 1, y = 2, s;
 
-	printf("%d", x);
+	printf("%li", x);
 	putchar(',');
 	putchar(' ');
-	printf("%d", y);
+	printf("%li", y);
 	for (i = 0; i < 49; i++)
 	{
 		s = x + y;
 		putchar(',');
 		putchar(' ');
-		printf("%d", s);
+		printf("%li", s);
 		x = y;
 		y = s;
 	}
