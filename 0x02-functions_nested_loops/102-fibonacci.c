@@ -17,6 +17,7 @@ int main(void)
 	{
 		s = x + y;
 		putchar(',');
+		putchar(' ');
 		printf("%d", s);
 		x = y;
 		y = s;
