@@ -15,7 +15,7 @@ int main(void)
 	putchar(',');
 	putchar(' ');
 	printf("%li", y);
-	for (i = 0; i < 49; i++)
+	for (i = 1; i < 49; i++)
 	{
 		s = x + y;
 		putchar(',');
