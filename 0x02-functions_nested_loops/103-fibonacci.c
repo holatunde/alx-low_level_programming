@@ -18,7 +18,7 @@ int main(void)
 	while (s < 4000000)
 	{
 		s = x + y;
-		if (s % 2 ==0)
+		if (s % 2 == 0)
 			z += s;
 		x = y;
 		y = x;

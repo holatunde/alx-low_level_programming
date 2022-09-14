@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i, x = 1, y = 2;
-	unsigned long long s;
+	unsigned long s;
 
 	printf("%d, ", x);
 	printf("%d", y);
@@ -18,7 +18,7 @@ int main(void)
 		s = x + y;
 		putchar(',');
 		putchar(' ');
-		printf("%llu", s);
+		printf("%lu", s);
 		x = y;
 		y = s;
 	}
