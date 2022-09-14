@@ -8,13 +8,14 @@
 
 int main(void)
 {
-	int i, x = 1, y = 2, s;
+	int i;
+	long int x = 1, y = 2, s;
 
 	printf("%d", x);
 	putchar(',');
 	putchar(' ');
 	printf("%d", y);
-	for (i = 1; i < 49; i++)
+	for (i = 0; i < 49; i++)
 	{
 		s = x + y;
 		putchar(',');
