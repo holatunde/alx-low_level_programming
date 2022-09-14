@@ -11,17 +11,17 @@ int main(void)
 	int i, x = 1, y = 2, s;
 
 	printf("%d", x);
-	_putchar(',');
+	putchar(',');
 	printf("%d", y);
 	for (i = 1; i < 50; i++)
 	{
 		s = x + y;
-		_putchar(',');
+		putchar(',');
 		printf("%d", s);
 		x = y;
 		y = s;
 	}
-	_putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
