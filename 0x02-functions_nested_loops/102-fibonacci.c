@@ -12,6 +12,7 @@ int main(void)
 
 	printf("%d", x);
 	putchar(',');
+	putchar(' ');
 	printf("%d", y);
 	for (i = 1; i < 50; i++)
 	{
