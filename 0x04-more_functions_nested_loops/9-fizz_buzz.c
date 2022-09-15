@@ -12,7 +12,7 @@ int main(void)
 {
 	int num = 1;
 
-	while (num < 100)
+	for (num = 1; num <= 100; num++)
 	{
 		if ((num % 3 == 0) && (num % 5 == 0))
 		{
@@ -26,7 +26,7 @@ int main(void)
 		{
 			if (num != 100)
 			{
-				printf("Buzz");
+				printf("Buzz ");
 			}
 			else
 			{
@@ -37,7 +37,6 @@ int main(void)
 		{
 			printf("%d ", num);
 		}
-		num++;
 	}
 	printf("\n");
 
