@@ -13,6 +13,6 @@ void print_rev(char *s)
 	int c = strlen(s);
 
 	while (c--)
-		putchar(*(str + c));
+		putchar(*(s + c));
 	putchar(10);
 }
