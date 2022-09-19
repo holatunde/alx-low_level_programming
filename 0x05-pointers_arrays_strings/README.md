@@ -1,0 +1,3 @@
+pointers
+arrays
+strings
