@@ -1,22 +1,35 @@
 #include "main.h"
-
 /**
- * print_number - prints an integer
- * @n: integer to be printed
- *
+ * print_number - Print integer
+ * @n: number
  */
-
 void print_number(int n)
 {
-	unsigned int num = n;
+	unsigned int n2, number, base10 = 1;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
+		n2 = -n;
 	}
-	if ((num / 10) > '0')
-		print_number(num / 10);
-
-	_putchar((num % 10) + '0');
+	else
+	{
+		n2 = n;
+	}
+	number = n2;
+	/* Obtenemos su base */
+	while (number > 9)
+	{
+		number = number / 10;
+		base10 = base10 * 10;
+	}
+	/* Descomponemos en base 10*/
+	number = n2;
+	while (base10 > 1)
+	{
+		_putchar((number / base10) + '0');
+		number = number % base10;
+		base10 = base10 / 10;
+	}
+	_putchar((n2 % 10) + '0');
 }
