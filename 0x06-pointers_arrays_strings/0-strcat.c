@@ -20,3 +20,4 @@ char *_strcat(char *dest, char *src)
 	for (p = 0; src[p]; p++)
 		dest[d++] = src[p];
 	return (dest);
+}
