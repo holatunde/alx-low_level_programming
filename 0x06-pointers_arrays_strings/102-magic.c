@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - prints number
+ *
+ * Return: nothing
+ */
 int main(void)
 {
 	int n;
