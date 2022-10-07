@@ -13,20 +13,21 @@ void _print(char *str, int l)
 	int i, j;
 
 	i = j = 0;
-	while (i < 1)
+	while (i < l)
 	{
-		if (str[i] != '\0')
+		if (str[i] != '0')
 			j = 1;
 		if (j || i == l - 1)
 			_putchar(str[i]);
 		i++;
 	}
+
 	_putchar('\n');
 	free(str);
 }
 
 /**
- * mul - multiplies a char with a str and places the answer into dest
+ * mul - multiplies a char with a string and places the answer into dest
  * @n: char to multiply
  * @num: string to multiply
  * @num_index: last non NULL index of num
@@ -45,7 +46,8 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 		mul = (n - '0') * (num[j] - '0') + mulrem;
 		mulrem = mul / 10;
 		add = (dest[k] - '0') + (mul % 10) + addrem;
-		addrem = add % 10 + '0';
+		addrem = add / 10;
+		dest[k] = add % 10 + '0';
 	}
 	for (addrem += mulrem; k >= 0 && addrem; k--)
 	{
@@ -60,8 +62,8 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 	return (dest);
 }
 /**
- * check_for_digits - checks the argument to ensure they are digits
- * @av: pointer to argument
+ * check_for_digits - checks the arguments to ensure they are digits
+ * @av: pointer to arguments
  *
  * Return: 0 if digits, 1 if not
  */
@@ -79,10 +81,11 @@ int check_for_digits(char **av)
 	}
 	return (0);
 }
+
 /**
  * init - initializes a string
- * @str: string to initializes
- * @l: length of string
+ * @str: sting to initialize
+ * @l: length of strinf
  *
  * Return: void
  */
@@ -94,50 +97,51 @@ void init(char *str, int l)
 		str[i] = '0';
 	str[i] = '\0';
 }
+
 /**
- * main - multiply two number
- * @argc: number of argument
+ * main - multiply two numbers
+ * @argc: number of arguments
  * @argv: argument vector
  *
  * Return: zero, or exit status of 98 if failure
  */
 int main(int argc, char *argv[])
 {
-	int n1, n2, len, t, i;
+	int l1, l2, ln, ti, i;
 	char *a;
-	char *b;
+	char *t;
 	char e[] = "Error\n";
 
 	if (argc != 3 || check_for_digits(argv))
 	{
-		for (t = 0; e[t]; t++)
-			_putchar(e[t]);
+		for (ti = 0; e[ti]; ti++)
+			_putchar(e[ti]);
 		exit(98);
 	}
-	for (n1 = 0; argv[1][n1]; n1++)
+	for (l1 = 0; argv[1][l1]; l1++)
 		;
-	for (n2 = 0; argv[2][n2]; n2++)
+	for (l2 = 0; argv[2][l2]; l2++)
 		;
-	len = n1 + n2 + 1;
-	a = malloc(len * sizeof(char));
+	ln = l1 + l2 + 1;
+	a = malloc(ln * sizeof(char));
 	if (a == NULL)
 	{
-		for (t = 0; e[t]; t++)
-			_putchar(e[t]);
+		for (ti = 0; e[ti]; ti++)
+			_putchar(e[ti]);
 		exit(98);
 	}
-	init(a, len - 1);
-	for (t = n2 - 1, i = 0; t >= 0; t--, i++)
+	init(a, ln - 1);
+	for (ti = l2 - 1, i = 0; ti >= 0; ti--, i++)
 	{
-		b = mul(argv[2][t], argv[1], n1 - 1, a, (len - 2) - i);
-		if (b == NULL)
+		t = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
+		if (t == NULL)
 		{
-			for (t = 0; e[t]; t++)
-				_putchar(e[t]);
+			for (ti = 0; e[ti]; ti++)
+				_putchar(e[ti]);
 			free(a);
 			exit(98);
 		}
 	}
-	_print(a, len - 1);
+	_print(a, ln - 1);
 	return (0);
 }
