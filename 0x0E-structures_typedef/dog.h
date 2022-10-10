@@ -11,11 +11,11 @@ int _putchar(char);
  * description: a function
  */
 
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} dog_t;
+}
 
 #endif /* !DOG_H */
