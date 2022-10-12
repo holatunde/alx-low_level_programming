@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	a = atoi(argv[1]);
-	b = atoi(argv[2]);
+	b = atoi(argv[3]);
 	result = op(a, b);
 
 	printf("%d\n", result);
